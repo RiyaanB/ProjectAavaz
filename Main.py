@@ -201,7 +201,7 @@ def blow_game(moves):
             pygame.draw.rect(display, color, (20 + (xyz*width_of_panel), 20, width, 1040))
         pygame.display.update()
 
-card_game()
+
 QUIT = False
 while not QUIT:
     for event in pygame.event.get():
@@ -218,7 +218,7 @@ while not QUIT:
             if detected_word in current_word.variations:
                 boolean = True
                 break
-        if True or boolean:
+        if boolean:
             print("correct")
             while time.time() - a < 1.5:
                 display.fill((0, 255, 0))
@@ -226,7 +226,7 @@ while not QUIT:
                 pygame.display.update()
             current_word = random.choice(words)
             correct_counter += 1
-            if correct_counter == 1:
+            if correct_counter == 5:
                 card_game()
                 correct_counter = 0
         else:

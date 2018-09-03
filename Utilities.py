@@ -39,6 +39,7 @@ class SpeechRecognizer:
     s.pause_threshold = 0.85
     s.phrase_threshold = 0.15
     s.non_speaking_duration = 0.2
+    s.timeout = 1
     
     def __init__(self):
         self.r = SpeechRecognizer.s
